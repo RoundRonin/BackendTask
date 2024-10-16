@@ -9,12 +9,12 @@ const search = async (req, res) => {
 
     try {
         const esResponse = await esClient.search({
-            index: 'documents', // Your ES index
+            index: 'documents',
             body: {
                 query: {
                     multi_match: {
                         query,
-                        fields: ['title^2', 'content'], // Boost title field
+                        fields: ['title', 'content'],
                         fuzziness: 'AUTO'
                     }
                 }
