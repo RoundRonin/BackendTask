@@ -8,6 +8,7 @@ const addDocument = async (req, res) => {
         const document = await db.Document.create({ title, content });
 
         // Index to Elasticsearch
+        // TODO ? issue: if es creation fails, db has untracked entry
         await esClient.index({
             index: 'documents',
             id: document.id.toString(),
