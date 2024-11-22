@@ -45,4 +45,4 @@ To run tests you need to use another command provided via makefile
 make test # to test
 ```
 
-
+# Contribution
