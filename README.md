@@ -46,3 +46,4 @@ make test # to test
 ```
 
 # Contribution
+You can contribute, but it seems rather pointless, since this is a test repo
